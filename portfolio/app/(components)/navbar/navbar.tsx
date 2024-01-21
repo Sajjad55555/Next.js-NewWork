@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Navbar() {
@@ -9,11 +10,11 @@ export default function Navbar() {
           className=' text-red-600'>olio</span> </div>
           <div>
             <ul className=' float-left justify-center flex p-2'>
-              <li className=" hover:text-red-400 mx-[10px] cursor-pointer">Home</li>
-              <li className=" hover:text-red-400 mx-[10px] cursor-pointer">About Us</li>
-              <li className=" hover:text-red-400 mx-[10px] cursor-pointer">Servies</li>
-              <li className=" hover:text-red-400 mx-[10px] cursor-pointer">Skills</li>
-              <li className=" hover:text-red-400 mx-[10px] cursor-pointer">Contact us</li>
+              <li className=" hover:text-red-400 mx-[10px] cursor-pointer"> <Link href="/"> Home</Link></li>
+              <li className=" hover:text-red-400 mx-[10px] cursor-pointer"><Link href="/"> About Us</Link></li>
+              <li className=" hover:text-red-400 mx-[10px] cursor-pointer"><Link href="/services"> Services</Link></li>
+              <li className=" hover:text-red-400 mx-[10px] cursor-pointer"><Link href="/products"> Products</Link></li>
+              <li className=" hover:text-red-400 mx-[10px] cursor-pointer"><Link href="/contact"> Contact us</Link></li>
             </ul>
           </div>
           <div >

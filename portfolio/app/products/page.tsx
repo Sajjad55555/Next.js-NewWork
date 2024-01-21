@@ -1,27 +1,39 @@
 import React from 'react'
 import Header from '../(components)/header/header'
 import Line from '../(components)/lining/lining'
+import ProdCard from '../(components)/productcard/productcard'
+const GetProduct = async ()=>{
+  try{
+  let responce = await fetch("https://fakestoreapi.com/products")
+  const result = responce.json()
+  return result
+}
+  catch (error) {
+    console.error('Error fetching product data:', error);
+  }
+}
 
-export default function Products() {
+export default async function Products() {
+  const products = await GetProduct()
   return (
+    
     <div>
         <Header title="Products"/>
         <div className='h-auto w-100 items-center flex flex-wrap flex-col'>
-            <Line title="My Products"/>
+            <Line title="Our Products"/>
         </div>
-        <div className="border flex flex-wrap mt-3 items-center justify-center">
-            <div className=' m-2 border'>
-            <img className="h-60 w-44" src="/course1.png" alt="" />
-            <p className=" text-black max-w-sm text-lg font-semibold mb-2">My Product</p>
-            <p className="text-gray-600">Price</p>
-            <button  className=" mx-auto hover:text-black bg-blue-500 text-white rounded">Add to Cart</button>
-            </div>
-            <div className=' m-2'>
-            <img className="h-60 w-44" src="/course1.png" alt="" />
-            <p className=" text-black max-w-sm text-lg font-semibold mb-2">My Product</p>
-            <p className="text-gray-600">Price</p>
-            <button  className=" mx-auto hover:text-black bg-blue-500 text-white rounded">Add to Cart</button>
-            </div>
+        <div className="border flex flex-wrap mt-3  justify-center">
+        {products.map((product:any)=>(
+          
+           <ProdCard 
+          title={product.title} 
+          image={product.image}
+          price={product.price}
+          
+           />
+        ))}
+        
+         
         </div>
     </div>
   )

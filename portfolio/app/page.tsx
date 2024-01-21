@@ -58,13 +58,22 @@ export default function Contact() {
       {/* Service section End */}
       
 
-    <div className="h-auto w-100 flex flex-wrap flex-col items-start mt-4">
-   <Line title="Cantact Us"/>
-   <div className=" h-full min-w-0.5 border rounded bg-red-600 border-red-600">Heloo</div>
-   <div className="w-full  flex flex-wrap items-start  ">
-  <BeautifulCard title="" image="/WhatsApp Image 2024-01-19 at 04.00.00_7e4547a0.jpg" />
-   </div>
-   <div className=" items-end"> about us</div>
+    <div className="h-auto w-full mt-4">
+      <div className=" justify-center flex">
+        <Line title="About Us"/>
+      </div>
+      <div className=" justify-between flex ">
+      <div className=" justify-start items-start ml-2 mt-7 ">
+        <p className=" text-3xl font-bold ">About Us</p>
+        <img className=" w-60 h-56 " src="/WhatsApp Image 2024-01-19 at 04.00.00_7e4547a0.jpg" alt="" />
+      </div>
+      <div className=" flex flex-col items-center mr-8 mt-12">
+        <p className=" mr-52 font-medium text-pretty text-4xl">Build. Launch. Grow.<br/>
+Lead by our expertise.</p>
+        <p className=" mt-4">Do you have an tech-smart idea in your head? Lets give it life together.<br/> Following the "Your Idea, Our Solution Agenda"; We'd love to develop your<br/> product from scratch. We are capable to serve all niches, and companies of <br/> all sizes, from enterprises to small startups. We'd help to achieve your dreams<br/> and grow.</p>
+      <button className=" rounded font-semibold border mt-5 bg-red-600">Explor Now</button>
+      </div>
+      </div>
     </div>
 
 
